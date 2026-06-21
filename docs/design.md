@@ -215,8 +215,20 @@ AI Agent 核心能力。模型返回工具调用请求，rask 执行后将结果
 
 涉及 Rust 知识：JSON-RPC、async stream、进程间通信。
 
-### 沙箱执行
-执行代码类工具时隔离运行环境（容器 / WASM sandbox），防止副作用。
+### 作为库使用（TODO: Phase 5）
 
-涉及 Rust 知识：subprocess、WASM runtime（wasmtime）、权限模型。
+`rask-core` 计划发布到 crates.io，届时其他 Rust 项目可以依赖它：
+
+```toml
+# crates.io（发布后）
+rask-core = "0.1"
+
+# git 依赖
+rask-core = { git = "https://github.com/wzhongyou/rask" }
+
+# 本地路径
+rask-core = { path = "../rask/crates/core" }
+```
+
+API 稳定后补充公开接口文档。
 

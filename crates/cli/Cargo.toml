@@ -1,0 +1,17 @@
+[package]
+name = "rask"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "rask"
+path = "src/main.rs"
+
+[dependencies]
+rask-core = { path = "../core" }
+clap = { version = "4", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+crossterm = "0.27"
+indicatif = "0.17"
+toml = "0.8"
